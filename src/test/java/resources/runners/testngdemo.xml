@@ -3,7 +3,8 @@
 <suite name="testsuite" verbose="1">
     <test name="Demo Test">
         <classes>
-
+        <class name="com.orangehrm.testsuite.LoginTest"></class>
+        <class name="com.orangehrm.testsuite.UserTest"></class>
         </classes>
     </test>
 </suite>
