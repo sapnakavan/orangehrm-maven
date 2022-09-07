@@ -16,7 +16,7 @@ public class UserTest extends TestBase {
 
     AddUserPage addUserPage = new AddUserPage();
 
-    @Test
+    @Test(priority = 1)
     public void adminshouldaddusersuccessfully() throws InterruptedException {
         loginPage.loginToApplication("Admin", "admin123");
         homePage.clickonAdmin();
@@ -34,7 +34,7 @@ public class UserTest extends TestBase {
 
     }
 
-    @Test
+    @Test(priority = 2)
     public void searchTheUserCreatedAndVerifyIt() throws InterruptedException {
         loginPage.loginToApplication("Admin", "admin123");
         homePage.clickonAdmin();
@@ -47,7 +47,7 @@ public class UserTest extends TestBase {
 
     }
 
-    @Test
+    @Test(priority = 3)
     public void verifyThatAdminShouldDeleteTheUserSuccessFully() throws InterruptedException {
         this.searchTheUserCreatedAndVerifyIt();
         viewSystemUserPage.clickondeleteckeckbox();
@@ -55,7 +55,7 @@ public class UserTest extends TestBase {
         viewSystemUserPage.setYesdelete();
     }
 
-    @Test
+    @Test(priority = 4)
     public void searchTheDeletedUserAndVerifyTheMessageNoRecordFound() throws InterruptedException {
         loginPage.loginToApplication("Admin", "admin123");
         homePage.clickonAdmin();

@@ -12,20 +12,20 @@ public class LoginTest extends TestBase {
 
     ViewSystemUserPage viewSystemUserPage = new ViewSystemUserPage();
 
-    @Test
+    @Test(priority = 1)
     public void verifyUserShouldLoginSuccessfully() {
         loginPage.enterUsername("Admin");
         loginPage.enterPassword("admin123");
         loginPage.clickonLoginButton();
     }
 
-    @Test
+    @Test(priority = 2)
     public void verifyThatTheLogoDisplayOnHomePage() {
         loginPage.loginToApplication("Admin", "admin123");
         homePage.getlogo();
     }
 
-    @Test
+    @Test(priority = 3)
     public void verifyUserShouldLogOutSuccessFully() {
         loginPage.loginToApplication("Admin", "admin123");
         viewSystemUserPage.clickonuserlogo();
